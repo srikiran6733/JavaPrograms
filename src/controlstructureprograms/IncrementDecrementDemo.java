@@ -1,74 +1,84 @@
 package controlstructureprograms;
 
 public class IncrementDecrementDemo {
-    public static void incrementDecrementDemo(){
+
+    /**
+     * Demonstrates the usage of pre-increment, post-increment,
+     * pre-decrement, and post-decrement operators on integers and characters.
+     */
+    public static void incrementDecrementDemo() {
         System.out.println("Started executing the incrementDecrementDemo().....");
+
+        // Pre-Increment Example
         System.out.println("*********Pre Increment**********");
-        int g=15;
-        System.out.println("Before pre increment g value is :"+g);
-        int s=75+(++g);
-        System.out.println("After pre increment g value is :"+g);
-        System.out.println("After pre increment s value is :"+s);
+        int g = 15;
+        System.out.println("Before pre increment, g = " + g);
+        int s = 75 + (++g); // g is incremented first, then added
+        System.out.println("After pre increment, g = " + g);
+        System.out.println("Result of 75 + (++g), s = " + s);
 
+        // Post-Increment Example
         System.out.println("*********Post Increment**********");
-        int gs=45;
-        System.out.println("Before post increment gs value is :"+gs);
-        int ch=10+(gs++);
-        System.out.println("After post increment gs value is :"+gs);
-        System.out.println("After post increment ch value is :"+ch);
+        int gs = 45;
+        System.out.println("Before post increment, gs = " + gs);
+        int ch = 10 + (gs++); // gs is added first, then incremented
+        System.out.println("After post increment, gs = " + gs);
+        System.out.println("Result of 10 + (gs++), ch = " + ch);
 
+        // Pre-Decrement Example
         System.out.println("*********Pre decrement**********");
-        int g1=15;
-        System.out.println("Before pre decrement g1 value is :"+g1);
-        int s1=75+(--g);
-        System.out.println("After pre decrement g1 value is :"+g1);
-        System.out.println("After pre decrement s1 value is :"+s1);
+        int g1 = 15;
+        System.out.println("Before pre decrement, g1 = " + g1);
+        int s1 = 75 + (--g); // g is decremented first, then added
+        System.out.println("After pre decrement, g1 = " + g1);
+        System.out.println("Result of 75 + (--g), s1 = " + s1);
 
+        // Post-Decrement Example
         System.out.println("*********Post decrement**********");
-        int gs1=45;
-        System.out.println("Before post decrement gs value is :"+gs1);
-        int ch1=10+(gs--);
-        System.out.println("After post decrement gs value is :"+gs1);
-        System.out.println("After post decrement ch value is :"+ch1);
+        int gs1 = 45;
+        System.out.println("Before post decrement, gs1 = " + gs1);
+        int ch1 = 10 + (gs--); // gs is added first, then decremented
+        System.out.println("After post decrement, gs = " + gs1);
+        System.out.println("Result of 10 + (gs--), ch1 = " + ch1);
 
-        System.out.println("*********Charecter Pre Increment**********");
+        // Character Pre-Increment
+        System.out.println("*********Character Pre Increment**********");
+        char chctr = 'A';
+        System.out.println("Before pre increment, chctr = " + chctr);
+        char chctr1 = (char) (5 + (++chctr)); // chctr incremented, then 5 added
+        System.out.println("After pre increment, chctr = " + chctr);
+        System.out.println("Result of 5 + (++chctr), chctr1 = " + chctr1);
 
-        char chctr='A';
-        System.out.println("Before pre increment gs value is :"+chctr);
-        char chctr1= (char) (5+(++chctr));
-        System.out.println("After pre increment gs value is :"+chctr);
-        System.out.println("After pre increment ch value is :"+chctr1);
+        // Character Post-Increment
+        System.out.println("*********Character Post Increment**********");
+        char postch = 'A';
+        System.out.println("Before post increment, postch = " + postch);
+        char postch1 = (char) (1 + (++postch)); // pre-increment actually
+        System.out.println("After pre increment, postch = " + postch);
+        System.out.println("Result of 1 + (++postch), postch1 = " + postch1);
 
-        System.out.println("*********Charecter Post Increment**********");
+        // Character Post-Decrement
+        System.out.println("*********Character Pre decrement**********");
+        char prechdecrement = 'H';
+        System.out.println("Before post decrement, prechdecrement = " + prechdecrement);
+        char prechdecrement1 = (char) (5 + (prechdecrement--)); // value used first, then decremented
+        System.out.println("After post decrement, prechdecrement = " + prechdecrement);
+        System.out.println("Result of 5 + (prechdecrement--), prechdecrement1 = " + prechdecrement1);
 
-        char postch='A';
-        System.out.println("Before post increment gs value is :"+postch);
-        char postch1= (char) (1+(++postch));
-        System.out.println("After pre increment gs value is :"+chctr);
-        System.out.println("After pre increment ch value is :"+postch1);
-
-        System.out.println("*********Charecter Pre decrement**********");
-
-        char prechdecrement='H';
-        System.out.println("Before post decrement value is :"+prechdecrement);
-        char prechdecrement1= (char) (5+(prechdecrement--));
-        System.out.println("After pre increment value is :"+prechdecrement);
-        System.out.println("After pre increment value is :"+prechdecrement1);
-
-        System.out.println("*********Charecter Post decrement**********");
-
-        char postchdecrement='K';
-        System.out.println("Before post decrement value is :"+postchdecrement);
-        char postchdecrement1= (char) (1+(--postchdecrement));
-        System.out.println("After pre decrement value is :"+postchdecrement);
-        System.out.println("After pre decrement value is :"+postchdecrement1);
+        // Character Pre-Decrement
+        System.out.println("*********Character Post decrement**********");
+        char postchdecrement = 'K';
+        System.out.println("Before pre decrement, postchdecrement = " + postchdecrement);
+        char postchdecrement1 = (char) (1 + (--postchdecrement)); // pre-decrement then add
+        System.out.println("After pre decrement, postchdecrement = " + postchdecrement);
+        System.out.println("Result of 1 + (--postchdecrement), postchdecrement1 = " + postchdecrement1);
     }
 
-
-
-
+    /**
+     * Main method to run the increment and decrement demo.
+     * @param args command-line arguments
+     */
     public static void main(String[] args) {
         incrementDecrementDemo();
-
     }
 }

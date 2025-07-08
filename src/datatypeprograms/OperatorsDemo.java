@@ -1,53 +1,78 @@
 package datatypeprograms;
 
+/**
+ * Demonstrates the usage of arithmetic, relational, and logical operators
+ * in Java using static variables and expressions.
+ */
 public class OperatorsDemo {
-public static int g=25,s=10;
 
+    // Static integer variables used in operations
+    public static int g = 25, s = 10;
+
+    /**
+     * Main method to run operator demonstrations.
+     * @param args command-line arguments
+     */
     public static void main(String[] args) {
 
-        //Arithmatic operators
-        int addition =g+s;  //35
-        System.out.println("g+s expression addition result value is :"+addition);
+        // --------- Arithmetic Operators ---------
 
-        int sub =g-s;   //15
-        System.out.println("g-s expression addition result value is :"+sub);
+        // Addition of g and s
+        int addition = g + s;
+        System.out.println("g+s expression addition result value is :" + addition);
 
-        int div =g/s; //2
-        System.out.println("g/s expression addition result value is :"+div);
+        // Subtraction of s from g
+        int sub = g - s;
+        System.out.println("g-s expression addition result value is :" + sub);
 
-        int multiplication =g*s;    //250
-        System.out.println("g*s expression addition result value is :"+multiplication);
+        // Integer division of g by s
+        int div = g / s;
+        System.out.println("g/s expression addition result value is :" + div);
 
-        //conditional operators
+        // Multiplication of g and s
+        int multiplication = g * s;
+        System.out.println("g*s expression addition result value is :" + multiplication);
 
-        boolean g1 =g>s;    //true
-        System.out.println("g>s expression addition result value is :"+g1);
 
-        boolean g2 =g<s;    //false
-        System.out.println("g<s expression addition result value is :"+g2);
+        // --------- Relational (Comparison) Operators ---------
 
-        boolean g3 =g==s;   //false
-        System.out.println("g==s expression addition result value is :"+g3);
+        // Greater than
+        boolean g1 = g > s;
+        System.out.println("g>s expression result value is :" + g1);
 
-        boolean g4 =g>=s;   //true
-        System.out.println("g>=s expression addition result value is :"+g4);
+        // Less than
+        boolean g2 = g < s;
+        System.out.println("g<s expression result value is :" + g2);
 
-        boolean g5 =g<=s;   //false
-        System.out.println("g<=s expression addition result value is :"+g5);
+        // Equal to
+        boolean g3 = g == s;
+        System.out.println("g==s expression result value is :" + g3);
 
-        //Conditional operators
+        // Greater than or equal to
+        boolean g4 = g >= s;
+        System.out.println("g>=s expression result value is :" + g4);
 
-        boolean g6 =(g>s) && (g<18);    //false
-        System.out.println("g>s) && (g<18) expression addition result value is :"+g6);
+        // Less than or equal to
+        boolean g5 = g <= s;
+        System.out.println("g<=s expression result value is :" + g5);
 
-        boolean g7 =(g>s) && (s<18);    // true
-        System.out.println("(g>s) && (s<18) expression addition result value is :"+g7);
 
-        boolean g8 =(g>s) || (g<18);    // true
-        System.out.println("(g>s) || (g<18) expression addition result value is :"+g8);
+        // --------- Logical Operators ---------
 
-        boolean g9 =(g7 != g8);   // false
-        System.out.println("g>=s expression addition result value is :"+g9);
+        // Logical AND: true && false => false
+        boolean g6 = (g > s) && (g < 18);
+        System.out.println("(g>s) && (g<18) expression result value is :" + g6);
 
+        // Logical AND: true && true => true
+        boolean g7 = (g > s) && (s < 18);
+        System.out.println("(g>s) && (s<18) expression result value is :" + g7);
+
+        // Logical OR: true || false => true
+        boolean g8 = (g > s) || (g < 18);
+        System.out.println("(g>s) || (g<18) expression result value is :" + g8);
+
+        // Logical NOT EQUAL: true != true => false
+        boolean g9 = (g7 != g8);
+        System.out.println("g7 != g8 expression result value is :" + g9);
     }
 }
