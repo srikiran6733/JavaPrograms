@@ -32,7 +32,7 @@ public class SwitchDemoPrograms {
     /**
      * Write a program to read the data from keyboard & frame mathematical operations
      *
-     * @param args
+     * @param
      */
     public static void calculation(){
         double n1,n2;
@@ -69,43 +69,7 @@ public class SwitchDemoPrograms {
         System.out.println(n1+" "+operator+" "+n2+" "+" = "+output);
 
     }
-    private static void calculator(){
-        //declare n1,n2,operator
-        double n1,n2;
-        char operator;
 
-        //create an object for the Scanner class to give the input from the keyboard
-        Scanner sc= new Scanner(System.in);
-
-        System.out.println(" Enter n1 value :");
-        n1=sc.nextDouble();
-
-        System.out.println(" Enter n2 value :");
-        n2=sc.nextDouble();
-
-        operator=sc.next().charAt(0);
-
-        //declare output as variable
-        double output=0.0;
-
-        switch (operator){
-            case '+':
-                output=n1+n2;
-                break;
-            case '-':
-                output=n1-n2;
-                break;
-            case '*':
-                output=n1*n2;
-                break;
-            case '/':
-                output=n1/n2;
-                break;
-            default:
-                System.out.println("Invalid data");
-        }
-        System.out.println(n1+" "+operator+" "+n2+" "+" = "+output);
-    }
     
 
 
