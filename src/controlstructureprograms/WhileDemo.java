@@ -235,6 +235,32 @@ public class WhileDemo {
         return n * getFactorialValue(n - 1); // Recursive call
     }
 
+    /**
+     * Write a program to sum all the entered numbers
+     *
+     */
+
+    public static void addNumbers() {
+        System.out.println("Started executing the addNumbers().....");
+
+        int number, sum = 0;
+        char choice;
+
+        //create an object for the Scanner class
+        Scanner scanner = new Scanner(System.in);
+        do {
+            System.out.println("Please enter a number that you want to add :");
+            number = scanner.nextInt();
+
+            sum = sum + number;
+
+            System.out.println("Do you want to add another number(Yes/No) ?:");
+            choice = scanner.next().charAt(0);
+        }while (choice=='Y'||choice=='y');
+        System.out.println("Sum of all numbers is :"+sum);
+    }
+
+
     public static void main(String[] args) {
         print1To10Numbers();
         print10To1Numbers();
@@ -252,5 +278,6 @@ public class WhileDemo {
         getFactorial(5);
         int recursive = getFactorialValue(6);
         System.out.println("Get factorial value using recursive is :" + recursive);
+        addNumbers();
     }
 }
