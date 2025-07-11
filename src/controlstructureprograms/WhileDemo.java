@@ -260,6 +260,35 @@ public class WhileDemo {
         System.out.println("Sum of all numbers is :"+sum);
     }
 
+    /**
+     * Write a program to guess the random number
+     *
+     */
+
+    public static void guessNumber(){
+        System.out.println("Started executing the guessNumber()......");
+        int guessNumber,randomNumber;
+
+        //create an object for the scanner class
+        Scanner scanner=new Scanner(System.in);
+
+        //create an object for the class
+        randomNumber= (int) (Math.random()*100);
+        do{
+            System.out.println("Enter the guess number that you want to add :");
+            guessNumber=scanner.nextInt();
+            if(guessNumber==randomNumber){
+                System.out.println("You guessed the correct number");
+            } else if (guessNumber<randomNumber) {
+                System.out.println("Your guess number is less than the random number \n try again :");
+            }else{
+                System.out.println("Your guess number is more than the random number \n try again :");
+            }
+
+        }while (guessNumber!=randomNumber);
+
+    }
+
 
     public static void main(String[] args) {
         print1To10Numbers();
@@ -279,5 +308,6 @@ public class WhileDemo {
         int recursive = getFactorialValue(6);
         System.out.println("Get factorial value using recursive is :" + recursive);
         addNumbers();
+       //guessNumber();
     }
 }
