@@ -191,6 +191,16 @@ public class ForLoopDemoPrograms {
             return 1;
         return n * getFact(n - 1);
     }
+    /**
+     * Write a program to print 1 to 100 without using any numbers
+     */
+protected static void print1To100Numbers(){
+    System.out.println("Started executing the print1To100Numbers() .....");
+    for(int i=1;i<='d';i++){
+        System.out.print(i+"\t");
+    }
+    System.out.println();
+}
 
     /**
      * Main method to execute all demo programs.
@@ -217,5 +227,8 @@ public class ForLoopDemoPrograms {
 
         int val = getFact(5);
         System.out.println("Get the factorial value is :" + val);
+
+        print1To100Numbers();
+
     }
 }
