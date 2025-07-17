@@ -116,6 +116,69 @@ public class ArrayDemo {
         return evenSum;
     }
 
+    /**
+     * Write a program to copy num1 array elements to num2
+     * @param num
+     */
+public static void arrayCopy(int[] num){
+    System.out.println("Array 1 elements are :"+Arrays.toString(num));
+
+    int[] num2=new int[num.length];
+    for(int i=0;i<num.length;i++){
+        num2[i]=num[i];
+    }
+    System.out.println("Array2 -- num2 elements are .....");
+    System.out.println("num2 elements are :"+Arrays.toString(num2));
+}
+
+    /**
+     * Write a program to reverseInPlace
+     * @param num
+     */
+
+    public static void reverseINPlace(int[] num){
+        System.out.println("Before reverse the array is :"+Arrays.toString(num));
+
+        for(int i=0;i<num.length/2;i++){
+            int temp=num[i];
+            num[i]=num[num.length-1-i];
+            num[num.length-1-i]=temp;
+        }
+        System.out.println("After reverse the array is :"+Arrays.toString(num));
+    }
+
+    /**
+     * Write a program to search whether the given input data is present in the array or not
+     * @param num,data
+     */
+
+    protected static boolean searchArray(int[] num, int data){
+        boolean isAvailable=false;
+        for(int i=0;i<num.length;i++){
+            if(num[i]==data){
+                isAvailable=true;
+            }
+        }
+        return isAvailable;
+    }
+
+    /**
+     * Write a program to print duplicates
+     *
+     */
+public static void printDuplicates(){
+    String[] str={"Geetha","Nakshu","Milky","Shiva","GeethaSree","Shiva","Nakshu"};
+
+    for(int i=0;i<str.length;i++){
+        for(int j=i+1;j<str.length;j++){
+            if(str[i].equals(str[j])){
+                System.out.print(str[j]+"\t");
+            }
+        }
+
+    }
+    System.out.println();
+}
     public static void main(String[] args) {
         printVowels();
        int[] randomArr= getRandomArray();
@@ -126,5 +189,10 @@ public class ArrayDemo {
 
         int minEle= getMinElement(randomArr);
         System.out.println("Min element from the random array is :"+minEle);
+        arrayCopy(randomArr);
+        reverseINPlace(randomArr);
+        boolean result=searchArray(randomArr,78);
+        System.out.println("Result array is :"+result);
+        printDuplicates();
     }
 }
